@@ -1,0 +1,227 @@
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\usepackage[T1]{fontenc}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{url}
+\usepackage[colorlinks,linkcolor=black,urlcolor=black]{hyperref}
+\usepackage{multirow}
+%Robustify cftdot
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\robustify\cftdotfill
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{1}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{1}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+%-----------------------------------------------------------
+%Cali
+%\usepackage[cmintegrals,cmbraces]{newtxmath}
+%\usepackage{ebgaramond-maths}
+%\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{bookman}
+
+
+\usepackage{titlesec} 
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
+
+%Default heading
+\newcommand{\simpleheading}[1]{\vspace{0pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\Large \itshape{#1}} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+\titlespacing*{\section}
+{0pt}{5pt}{-10pt}
+
+%No inner box
+\newcommand{\resheading}[1]{
+\vspace{0pt}
+\section*{\scshape \textcolor{gray}{#1}}
+\rule{\textwidth}{0.5pt}
+  \vspace{-15pt}
+}
+
+\newcommand{\ressubheading}[4]{\vspace{-2pt}
+\begin{tabular*}{6.8in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+	\parbox[l]{350pt}{#3} & #4 \\
+\end{tabular*}\vspace{-6pt}
+}
+
+
+\newcommand{\ResExp}[5]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\parbox[l]{350pt}{\textbf{#1}} & #4 \\
+		\textit{#2} #3  &\\
+\end{tabular*}\vspace{0pt}
+\parbox[l]{350pt}{#5}
+}\vspace{-5pt}
+
+%--------------
+%Programmin Experience
+
+\newcommand{\ProgExp}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #3 \\
+		\multicolumn{2}{l}{\textit{with} #2: #4}\\
+\end{tabular*}\vspace{-6pt}\\
+%\begin{itemize}
+%\item[]{#4}
+%\end{itemize}
+}
+
+\newcommand{\BoxIt}[2]{{\makebox[#1 cm]{#2\hfill}}}
+
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{6.85in}{l@{\extracolsep{\fill}}r}
+\textbf {\scshape \huge{Zhongshi Jiang} }&  
+60 Fifth Ave, Room 505\\
+\href{http://cs.nyu.edu/zhongshi/}{\url{http://cs.nyu.edu/~zhongshi/}} & New York Univeristy\\
+\href{mailto:jiangzs@nyu.edu}{jiangzs@nyu.edu} &
+ New York, NY 10011\\
+%\url{http://home.ustc.edu.cn/~jiangzs} &\\
+%Last updated \bfseries{\today}&\\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}[label=,leftmargin=*]
+\item \ressubheading{Courant Institute, New York University}{New York, NY, USA}{Ph.D. Candidate in Computer Science}{Sept. 2016 - Present}
+\begin{itemize}[label=,leftmargin=8pt]
+	\resitem{Advisor: \textit{Daniele Panozzo}}
+	\resitem{GPA: 4.0/4.0}
+\end{itemize}
+\item \ressubheading{University of Science and Technology of China}{Hefei, China}{B.Sc. of Mathematics and Applied Mathematics}{Sept. 2012 - June 2016}
+% %from Sep. 1st
+\begin{itemize}[label=,leftmargin=8pt]
+    \resitem{School of the Gifted Young}
+\end{itemize}
+
+%\item \ressubheading{The University of Sydney}{Sydney, Australia}{Visiting Student in Mathematics}{Mar. 2014 - July 2014}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Employment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}[label=,leftmargin=*]
+		\item 
+\ressubheading{Adobe Research}{Seattle, WA / New York, NY}{Research Scientist Intern}{May 2017 - Sept. 2018}
+\begin{itemize}[label=,leftmargin=8pt]
+	\resitem{Mentor: \textit{Vladimir G. Kim}}
+\end{itemize}
+
+\item
+\ressubheading{Courant Institute, New York University}{New York, NY}{Teaching Assistant}{Sept. 2017 - May 2018}
+\begin{itemize}[label=,leftmargin=8pt]
+	\resitem{\textit{CSCI-GA 2270-001} Computer Graphics}
+	\resitem{\textit{CSCI-GA.3033-018} Geometric Modeling}
+\end{itemize}
+%\item \ressubheading{Summer School}{Hefei, China}{Advisor: Prof. }{Jul. 2016}\\
+
+%We have extensively studied advanced topics in differential geometry, complex analysis, special functions and fluid dynamics.}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Standardized Tests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{itemize}
+%\itemsep-0.25em
+%\item{\makebox[3cm]{TOEFL\hfill}} R 30 + L 27 + S 24 + W 29 = Total 110 % %ETS reg number 0000000025224519 jiangzs@mail.ustc.edu.cn
+%
+%\item{\makebox[3cm]{GRE (General)\hfill}}  V 160 (85\%) + Q 168 (95\%)  + AW 3.0 (15\%) %7911850
+%\item{\makebox[3cm]{GRE (Subject)\hfill}} Mathematics 900 (97 \%) %4037034
+%\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-2pt}
+\begin{itemize}[label=,leftmargin=*]
+
+\item \textbf{Surface Networks}\\
+Ilya Kostrikov, Zhongshi Jiang, Daniele Panozzo, Denis Zorin, and Joan Bruna.
+\\ \textit{IEEE Conference on Computer Vision and Pattern Recognition} (\textbf{CVPR}), 2018
+
+\item \textbf{Simplicial Complex Augmentation Framework for Bijective Maps.}\\
+Zhongshi Jiang, Scott Schaefer, and Daniele Panozzo.
+\\ \textit{ACM Transaction on Graphics} (Proc. \textbf{SIGGRAPH Asia}), 2017
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \resheading{Invited Talks}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{itemize}[label=,leftmargin=*]
+% \item \textbf{Simplicial Complex Augmentation Framework for Bijective Maps.}\\
+% University of Science and Technology of China, Nov. 2017 \\
+% SIGGRAPH Asia, Bangkok, Nov. 2017
+% \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Professional Service}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-2pt}
+\begin{itemize}[label=,leftmargin=*]
+\item \textbf{Reviewer}
+SIGGRAPH 2018,
+ACM Transactions on Graphics (TOG) 2018,
+Graphics Interface 2018
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards and Honors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+\begin{itemize}[label=,leftmargin=*,itemsep=-1.5pt]
+\item \textbf{Adobe Research Fellowship, 2018}\\
+- Recognize 10 graduate students worldwide for research in computer science.
+\item
+\textbf{New York University MacCracken Fellowship, 2016}\\
+- Five year fellowship support for PhD studies.
+\item
+\textbf{China Scholarship Council Scholarship, 2014}\\
+- Fellowship support for exchange studies at the University of Sydney.
+\item
+\textbf{Musical Level 10 in Violin, 2011}\\
+- Top level for non-professionals in China.
+\end{itemize}
+
+\end{document}
