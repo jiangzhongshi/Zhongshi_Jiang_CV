@@ -18,7 +18,6 @@ cache:
   - "$HOME/miniconda"
   - "$HOME/.cache/Tectonic"
 script:
-- cd ./src/
 - tectonic --keep-intermediates --reruns 0 ./main.tex
 - if [ -f "main.bcf" ]; then biber main; fi
 - tectonic ./main.tex --print
