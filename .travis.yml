@@ -29,7 +29,7 @@ deploy:
     secure: iw2bEYPZliZ6puDO/f+Lpz7fjl4viyuRbXhE8FVKqGwkocSYf6/lTfu4YQ8k7ALPir/56tFa3UU1MJYQ20hZBB89EtXmHGfPPhzBom0Ei05u0hENg9WRgzA3iLHkIqy9oF8oW33cxhC25gffOAI2yo7Qi0z7wUDw7kBeYqUeQFpceh21moD1DzsuMmk9PRxLz47J0UhwZKnoay4rErTOWU/P+QMxF0gq6MZ6nlZv50ZuVQOJAquEMxqGUFrbiF8cph0aRxnirXsmPs82J8ZqT/EiH7tqJWNWrubztBOuJPI6Wh03yIVsSzSQLoAUMwuLcFJ4PtxzqRgoo700hdlGeTHYH2m9s/NKiB9McOsZWhkaXD1VhuH0tDq0LtwwiU5zBMbd6aB0ecE9K5vhGldlCjNeLvP4B5KFcpwweqsHkbHTOb8+zZGIHbD2zuymKZUO6CKcnAVFf2RqBY9l7OyMUWV6MpuU+bFoM6+HFuz3efwum75o4tqMOhtPT3xxckLKzE9rm0lKHWVsRbkY+aFS8F2Z62assjk7AAwFIIPud6O06Las2SxXtmyDA4N/DqP9D0xCprUqT53tVYaPllPY+qFIQcFCFLkAkKxCSYXB9m7J4Q09CitwD/4HrOVfnKUtxWE7R4a4wgeVzHtjq30AUqhQdPO1IEiQNnB87FDntXE=
   file:
   - ./main.pdf
+  overwrite: true
   skip_cleanup: true
   on:
-      tags: true
       branch: master
