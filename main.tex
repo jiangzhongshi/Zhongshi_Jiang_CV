@@ -14,6 +14,7 @@
 \usepackage{tocloft}
 \usepackage{enumitem}
 \usepackage{etoolbox}
+\usepackage{pifont}
 \robustify\cftdotfill
 %-----------------------------------------------------------
 %Edit these values as you see fit
@@ -68,13 +69,13 @@
 %No inner box
 \newcommand{\resheading}[1]{
 \vspace{0pt}
-\section*{\scshape \textcolor{gray}{#1}}
+\section*{\scshape #1}
 \rule{\textwidth}{0.5pt}
   \vspace{-15pt}
 }
 
 \newcommand{\ressubheading}[4]{\vspace{-2pt}
-\begin{tabular*}{6.8in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{\linewidth}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 	\parbox[l]{350pt}{#3} & #4 \\
 \end{tabular*}\vspace{-6pt}
@@ -104,6 +105,7 @@
 
 \newcommand{\BoxIt}[2]{{\makebox[#1 cm]{#2\hfill}}}
 
+\newcommand{\publication}[5]{\textbf{#1}, #2. \textit{#3} (#4), #5}
 %-----------------------------------------------------------
 
 
@@ -112,7 +114,7 @@
 \begin{tabular*}{6.85in}{l@{\extracolsep{\fill}}r}
 \textbf {\scshape \huge{Zhongshi Jiang} }&  
 60 Fifth Ave, Room 505\\
-\href{http://cs.nyu.edu/zhongshi/}{\url{http://cs.nyu.edu/~zhongshi/}} & New York Univeristy\\
+\href{http://cs.nyu.edu/zhongshi/}{\url{http://cs.nyu.edu/~zhongshi/}} & New York University\\
 \href{mailto:jiangzs@nyu.edu}{jiangzs@nyu.edu} &
  New York, NY 10011\\
 %\url{http://home.ustc.edu.cn/~jiangzs} &\\
@@ -124,7 +126,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}[label=,leftmargin=*]
+\begin{itemize}[label=\ding{250},leftmargin=*]
 \item \ressubheading{Courant Institute, New York University}{New York, NY, USA}{Ph.D. Candidate in Computer Science}{Sept. 2016 - Present}
 \begin{itemize}[label=,leftmargin=8pt]
 	\resitem{Advisor: \textit{Daniele Panozzo}}
@@ -143,14 +145,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Employment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}[label=,leftmargin=*]
-		\item 
+\begin{itemize}[label=\ding{080},leftmargin=*]
+\item 
 \ressubheading{Adobe Research}{Seattle, WA / New York, NY}{Research Scientist Intern}{May 2017 - Sept. 2018}
 \begin{itemize}[label=,leftmargin=8pt]
 	\resitem{Mentor: \textit{Vladimir G. Kim}}
 \end{itemize}
 
-\item
+\item 
 \ressubheading{Courant Institute, New York University}{New York, NY}{Teaching Assistant}{Sept. 2017 - May 2019}
 \begin{itemize}[label=,leftmargin=8pt]
 	\resitem{Computer Graphics, Geometric Modeling}
@@ -173,25 +175,25 @@
 \resheading{Publications}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-2pt}
-\begin{itemize}[label=,leftmargin=*]
+\begin{itemize}[label=\ding{112},leftmargin=*]
 
-\item \textbf{A Low-Parametric Rhombic Microstructure Family for Irregular Lattices
-},
+\item \publication{Bijective Projection in a Shell}{Zhongshi Jiang, Teseo Schneider, Daniele Panozzo and Denis Zorin}{ACM Transaction on Graphics}{Proc. \textbf{SIGGRAPH Asia}}{2020}
+\item \textbf{A Low-Parametric Rhombic Microstructure Family for Irregular Lattices},
 Davi Colli Tozoni, Jeremie Dumas, Zhongshi Jiang, Julian Panetta, Daniele Panozzo and Denis Zorin.
 \textit{ACM Transaction on Graphics} (Proc. \textbf{SIGGRAPH}), 2020
 \item \textbf{Progressive Embedding},
 Hanxiao Shen, Zhongshi Jiang, Denis Zorin, and Daniele Panozzo.
 \textit{ACM Transaction on Graphics} (Proc. \textbf{SIGGRAPH}), 2019
 
-\item \textbf{ABC: A Big CAD Model Dataset For Geometric Deep Learning},
+\item \textbf{A Big CAD Model Dataset For Geometric Deep Learning},
 Sebastian Koch, Albert Matveev, Zhongshi Jiang, Francis Williams, Alexey Artemov, Evgeny Burnaev, Marc Alexa, Denis Zorin and Daniele Panozzo.
 \textit{IEEE Conference on Computer Vision and Pattern Recognition} (\textbf{CVPR}), 2019
 
-\item \textbf{Surface Networks}
+\item \textbf{Surface Networks},
 Ilya Kostrikov, Zhongshi Jiang, Daniele Panozzo, Denis Zorin, and Joan Bruna.
 \textit{IEEE Conference on Computer Vision and Pattern Recognition} (\textbf{CVPR}), 2018
 
-\item \textbf{Simplicial Complex Augmentation Framework for Bijective Maps}
+\item \textbf{Simplicial Complex Augmentation Framework for Bijective Maps},
 Zhongshi Jiang, Scott Schaefer, and Daniele Panozzo.
 \textit{ACM Transaction on Graphics} (Proc. \textbf{SIGGRAPH Asia}), 2017
 \end{itemize}
